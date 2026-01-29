@@ -1,0 +1,29 @@
+# Program to find dot product of 2D or 3D vectors
+
+# Example input:
+# Dimension: 3
+# First vector:  1 2 3
+# Second vector: 4 5 6
+
+dim = int(input("Enter dimension (2 or 3): "))
+
+if dim not in [2, 3]:
+    print("Only 2D or 3D vectors are allowed.")
+else:
+    print("Enter elements of first vector:")
+    v1 = []
+    for i in range(dim):
+        value = float(input(f"v1[{i+1}]: "))
+        v1.append(value)
+
+    print("Enter elements of second vector:")
+    v2 = []
+    for i in range(dim):
+        value = float(input(f"v2[{i+1}]: "))
+        v2.append(value)
+
+    dot_product = 0
+    for i in range(dim):
+        dot_product += v1[i] * v2[i]
+
+    print("Dot product:", dot_product)
